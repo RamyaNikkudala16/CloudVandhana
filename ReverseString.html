@@ -1,0 +1,35 @@
+<!DocType html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+function reverseEachWord(s) {
+    const words = s.split(' ');
+    let reversedString = '';
+
+    for (let i = 0; i < words.length; i++) {
+        reversedString += reverseString(words[i]);
+        if (i < words.length - 1) {
+            reversedString += ' ';
+        }
+    }
+
+    return reversedString;
+}
+
+function reverseString(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+const s1 = prompt('enter a string');
+const reversedWords = reverseEachWord(s1);
+console.log(reversedWords);
+</script>
+</head>
+<body>
+</body>
+</html>
